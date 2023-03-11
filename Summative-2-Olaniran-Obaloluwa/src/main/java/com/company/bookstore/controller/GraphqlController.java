@@ -26,8 +26,8 @@ public class GraphqlController {
     PublisherRepository publisherRepo;
 
     @QueryMapping
-    public Publisher findPublisherById(@Argument int id) {
-        Optional<Publisher> returnVal  = publisherRepo.findById(id);
+    public Publisher findPublisherById(@Argument int publisherId) {
+        Optional<Publisher> returnVal  = publisherRepo.findById(publisherId);
         if (returnVal.isPresent()) {
             return returnVal.get();
         } else {
@@ -36,8 +36,8 @@ public class GraphqlController {
     }
 
     @QueryMapping
-    public Author findAuthorById(@Argument int id) {
-       Optional<Author> returnVal = authorRepo.findById(id);
+    public Author findAuthorById(@Argument int authorId) {
+       Optional<Author> returnVal = authorRepo.findById(authorId);
         if (returnVal.isPresent()) {
             return returnVal.get();
         } else {
@@ -46,8 +46,8 @@ public class GraphqlController {
     }
 
     @QueryMapping
-    public Book findBookById(@Argument int id) {
-        Optional<Book> returnVal = bookRepo.findById(id);
+    public Book findBookById(@Argument int bookId) {
+        Optional<Book> returnVal = bookRepo.findById(bookId);
         if (returnVal.isPresent()) {
             return returnVal.get();
         } else {

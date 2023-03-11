@@ -21,20 +21,22 @@ type Book {
     publisher: Publisher
 }
 type Author {
-     authorId: Int!
-     firstName: String!
-     lastName: String!
-     street: String!
-     city: String!
-     state: String!
-     postalCode: String!
-     phone: String!
-     email: String!
+    authorId: Int!
+    firstName: String!
+    lastName: String!
+    street: String!
+    city: String!
+    state: String!
+    postalCode: String!
+    phone: String!
+    email: String!
     books: [Book]
 }
 type Query {
-    findPublisherById(id:Int!): Publisher
-    findAuthorById(id:Int!): Author
-    findBookById(id:Int!): Book
-
+    findPublisherById(publisherId:Int!): Publisher
+    publishers: [Publisher]!
+    findAuthorById(authorId:Int!): Author
+    author: [Author]!
+    findBookById(bookId:Int!): Book
+    books: [Book]!
 }
