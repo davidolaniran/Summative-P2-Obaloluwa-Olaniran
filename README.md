@@ -4,6 +4,7 @@
 
 ### In this project, I worked together with a partner to build a REST API to manage inventory for a bookstore. Also provided support for querying with GraphQL.
 
+### Partner: Ayoub Osman worked on the ControllerTests(AuthorControllerTests, BookControllerTests, PublisherControllerTests)
 ### App Walk-though
 
 Youtube link of the Application Walk-though: https://www.youtube.com/watch?v=Zvn3Ec3ClcY
