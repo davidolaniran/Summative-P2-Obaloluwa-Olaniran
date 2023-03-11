@@ -6,7 +6,7 @@
 
 ### App Walk-though
 
-Youtube link of the Application Walk-though:
+Youtube link of the Application Walk-though: https://www.youtube.com/watch?v=Zvn3Ec3ClcY
 
 ### Required Features
 
