@@ -14,8 +14,6 @@ type Book {
     isbn: String!
     title: String!
     publishDate: String!
-    authorId: Int!
-    publisherId: Int!
     price: String!
     author : Author
     publisher: Publisher

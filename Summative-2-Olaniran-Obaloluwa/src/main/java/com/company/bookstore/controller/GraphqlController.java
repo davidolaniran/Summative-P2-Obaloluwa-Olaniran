@@ -9,6 +9,7 @@ import com.company.bookstore.repository.PublisherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
 import java.util.Optional;
@@ -48,6 +49,24 @@ public class GraphqlController {
     @QueryMapping
     public Book findBookById(@Argument int bookId) {
         Optional<Book> returnVal = bookRepo.findById(bookId);
+        if (returnVal.isPresent()) {
+            return returnVal.get();
+        } else {
+            return null;
+        }
+    }
+    @SchemaMapping
+    public Author author(Book book) {
+        Optional<Author> returnVal = authorRepo.findById(book.getAuthorId());
+        if (returnVal.isPresent()) {
+            return returnVal.get();
+        } else {
+            return null;
+        }
+    }
+    @SchemaMapping
+    public Publisher publisher(Book book) {
+        Optional<Publisher> returnVal = publisherRepo.findById(book.getPublisherId());
         if (returnVal.isPresent()) {
             return returnVal.get();
         } else {
