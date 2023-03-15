@@ -15,7 +15,7 @@ type Book {
     title: String!
     publishDate: String!
     price: String!
-    author : Author
+    author: Author
     publisher: Publisher
 }
 type Author {
